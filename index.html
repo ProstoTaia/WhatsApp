@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <!--support IE 9 or IE 8/-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Whatsapp</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="innerHeader">
+                <div class="logoAndActivity floatLeft">
+                    <a href="" class="logo">Логотип</a>
+                    <p class="activity">Назва, дескриптор, опис діяльності.</p>
+                </div>
+                <div class="bookTheCall floatRight">
+                     <p class="officeNumber">+3 096 888-88-88</p>
+                     <div class="buttonBookTheCall floatRight">
+                         <form>
+                          <input type="button" value="ЗАМОВИТИ ДЗВІНОК">
+                         </form>
+                     </div>
+                </div>
+                <div class="offer floatLeft">
+                    <h1>Отримай до <span class="blue"> 250 </span> клієнтів <span class="blue today"> вже сьогодні </span></h1>
+                    <p>Залиши заявку зараз та отримай<br/> першу <b>whatsapp </b>розсилку <span class="blue">БЕЗКОШТОВНО</span></p>
+                </div>
+                <div class="request">
+                  <form action="#">
+                        <p class="name floatLeft"> Ваше ім'я:<br>
+                            <input type="text" width="200px">
+                        </p>
+                        <p class="yourNumber floatRight"> Ваш телефон:<br/>
+                         <input type="tel" placeholder=" +38(___) ___-__-__" width="200px">
+                         </p>
+                        <div class="freeDelivery floatLeft">
+                          <input type="submit" value="ОТРИМАТИ БЕЗКОШТОВНУ РОЗСИЛКУ">
+                        </div>
+                    </form>
+                </div>
+                <div class="amountOfClients floatLeft">
+                    <p>Акцією скористувався: <span class="blockAmountOfClients">1001</span> клієнт</p>
+                </div>
+                <div class="headerPhone floatRight">
+                <img src="img/headerPhone.png"/>
+                </div>
+            </div>
+        </header>
+        <div class="clear"></div>
+        <div class="messageFormats">
+            <h2 class="messageFormatsWhatsApp">Формати WhatsApp повідомлень</h2>
+            <div class="slideshowContainer">
+                <div class="slides">
+                    <div class="slide floatLeft">
+                        <div class="iphone">
+                            <img src="img/iphone1.png" alt="iphone">
+                            <button>Текст</button>
+                        </div>
+                    </div>
+                    <div class="slide floatLeft">
+                        <div class="iphone">
+                            <img src="img/iphone3.png" alt="iphone">
+                            <button><img src="img/hand.png"></button>
+                        </div>
+                    </div>
+                    <div class="slide floatLeft" >
+                        <div class="iphone">
+                            <img src="img/iphone5.png" alt="iphone">
+                            <button>Текст і <img src="img/hand.png"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrows">
+                    <div class="arrow floatLeft" onclick="plusDivs(-1)">&#10094;</div>
+                    <div class="arrow floatRight" onclick="plusDivs(1)">&#10095;</div>
+                </div>
+                <div class="dots">
+                    <span class="dot" onclick="currentDiv(1)"></span>
+                    <span class="dot" onclick="currentDiv(2)"></span>
+                    <span class="dot" onclick="currentDiv(3)"></span>
+                    <span class="dot" onclick="currentDiv(4)"></span>
+                    <span class="dot" onclick="currentDiv(5)"></span>
+                    <span class="dot" onclick="currentDiv(6)"></span>
+                    <span class="dot" onclick="currentDiv(7)"></span>
+
+                </div>
+            </div>
+            <!-- DOTS OF SLIDER -->
+           <!-- <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+
+                function currentDiv(n) {
+                    showDivs(slideIndex = n);
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("slide");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > x.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = x.length}
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" w3-white", "");
+                    }
+                    x[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " w3-white";
+                }
+            </script>
+            <!-- ARROWS OF SLIDER
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+
+                function currentDiv(n) {
+                    showDivs(slideIndex = n);
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("slide");
+                    var arrows = document.getElementsByClassName("arrow");
+                    if (n > x.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = x.length
+                    }
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        arrows[i].className = arrows[i].className.replace(" w3-white", "");
+                    }
+                    x[slideIndex-1].style.display = "block";
+                    arrows[slideIndex-1].className += " w3-white";
+                }
+            </script>  -->
+        <!--     AUTOMATIC SLIDESHOW
+           <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("slides");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex> slides.length) {slideIndex = 1}
+                    slides[slideIndex-1].style.display = "block";
+                    setTimeout(showSlides, 2000);
+                }
+            </script> -->
+        <div class="tariffs">
+            <div class="innerTariffs">
+                <div class="tariffTitle"><h2>Тарифи</h2></div>
+              <div class="mainTariffs">
+                   <div class="initialTariff floatLeft">
+                       <div class="tariff"><a href="">Початковий</a></div>
+                       <hr>
+                       <div class="messagePrice">
+                       <p>Повідомлень: <br/><span class="blue">до 1000</span></p>
+                       <p>Ціна <br/> 1го повідомлення <span class="blue">0,50</span> $</p>
+                       </div>
+                       <form class="buttonTariff">
+                           <button type="button">ЗАМОВИТИ</button>
+                       </form>
+                   </div>
+                    <div class="optimalTariff floatLeft">
+                        <div class="tariff"><a href="">Оптимальний</a></div>
+                        <hr>
+                        <div class="messagePrice">
+                        <p>Повідомлень: <br/><span class="blue">до 5000</span></p>
+                        <p>Ціна <br/> 1го повідомлення <span class="blue">0,25</span> $</p>
+                        </div>
+                        <form class="buttonTariff">
+                            <button type="button">ЗАМОВИТИ</button>
+                        </form>
+                    </div>
+                    <div class="vipTariff floatLeft">
+                        <div class="tariff"><a href="">VIP</a></div>
+                        <hr>
+                        <div class="messagePrice">
+                        <p>Повідомлень: <br/><span class="blue">до 10000</span></p>
+                        <p>Ціна <br/> 1го повідомлення <span class="blue">0,10</span> $</p>
+                        </div>
+                        <form class="buttonTariff">
+                            <button type="button">ЗАМОВИТИ</button>
+                        </form>
+                    </div>
+              </div>
+              <div class="firstDelivery">
+                    <p class="floatLeft">Перша розсилка - <span class="green freeTariff">БЕЗКОШТОВНО</span></p>
+                   <form>
+                        <input type="button" value="СПРОБУВАТИ" class="floatRight">
+                    </form>
+                </div>
+             </div>
+        </div>
+        <div class="advantages">
+            <div class="innerAdvantages">
+                <div class="advantagesTitle"><h2>Чому ми?</h2></div>
+                <div class="advantagesMain">
+                    <div class="advantage floatLeft">
+                        <div class="icon"> <img src="img/advantage1.png"/></div>
+                        <div class="advantageInfo">
+                            <h3>Ціна від 10 копійок за повідомлення</h3>
+                            <p>Вартість 1-го повідомлення залежить від кількості бази клієнтів, за якими здійснюється розсилка.</p>
+                        </div>
+                    </div>
+                    <div class="advantage floatLeft">
+                        <div class="icon"> <img src="img/advantage2.png"/></div>
+                        <div class="advantageInfo">
+                            <h3>Гарантія результату або повернемо гроші</h3>
+                            <p>Ми даємо гарантію на свою розсилку, і якщо ви не отримаєте результат, ми готові повернути вартість розсилки.</p>
+                        </div>
+                    </div>
+                    <div class="advantage floatLeft">
+                        <div class="icon"> <img src="img/advantage3.png"/></div>
+                        <div class="advantageInfo">
+                            <h3>Перша розсилка нічого не варта</h3>
+                            <p>Ви можете вже зараз протестувати наш сервіс - абсолютно безкоштовно створити свою першу розсилку.</p>
+                        </div>
+                    </div>
+                    <div class="advantage floatLeft">
+                        <div class="icon"> <img src="img/advantage4.png"/></div>
+                        <div class="advantageInfo">
+                            <h3>Ви платите тільки за доставлені повідомлення</h3>
+                            <p>Система автоматично перевіряє, скільки абонентів з бази мають додаток whatsapp, і відправляє тільки їм, економлячи Ваш бюджет.</p>
+                        </div>
+                    </div>
+                    <div class="advantage floatLeft">
+                        <div class="icon"> <img src="img/advantage5.png"/></div>
+                        <div class="advantageInfo">
+                            <h3>Легальність розсилки</h3>
+                            <p>Ми несемо повну юридичну відповідальність за використовувану базу контактів.</p>
+                        </div>
+                    </div>
+                    <div class="advantage floatLeft">
+                        <div class="icon"> <img src="img/advantage6.png"/></div>
+                        <div class="advantageInfo">
+                            <h3>Допомога в підготовці контенту</h3>
+                            <p>Мы с удовольствием поможем Вам подготовить максимально продающий контент для Вашей whatsApp рассылки!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="blog">
+            <div class="innerBlog">
+                <div class="blogTitle"><h2>Чому Whatsapp?</h2></div>
+                <div class="iconWhatsapp floatLeft"> <img src="img\whatsappIcon.png"\></div>
+                <div class="whatsappInfo floatRight">
+                    <h4>100 млн за 4 місяці</h4>
+                    <p>Whatsapp активно зростаючий месенджер.<span class="green"> За 4 місяці</span> 2015 року кількість його користувачів збільшилася на <span class="green">100 млн.</span> На <span class="green">поточний момент</span> загальна кількість зареєстрованих складає більше <span class="green">900 млн.</span></p>
+
+                    <p>У 2015 році за даними, наданими аналітичною компанією App Annie, <span class="green">Whatsapp</span> став <span class="green">найбільш використовуваним</span> месенджером.</p>
+                    <form>
+                        <input type="submit" value="ЗАМОВИТИ РОЗСИЛКУ">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="geoTarget">
+            <div class="innerGeo">
+                <div class="leftColumnGeo floatLeft">
+                <div class="geoTitle">
+                    <h2 class="floatLeft">Гео-таргетинг</h2>
+                    <img class="floatLeft" src="img\geoIcon.png"\>
+                </div>
+                <div class="geoInfo">
+                    <p>Працюючи з нашими базами, ви завжди зможете підібрати потрібну вам аудиторію в потрібному місті.</p>
+                </div>
+                <div class="city">
+                    <select name="mydropdown floatleft">
+                        <option value="" disabled="disabled" selected="selected">Вибрати місто:</option>
+                        <option value="Kyiv">Київ</option>
+                        <option value="Vinnytsia">Вінниця</option>
+                    </select>
+                    <form class="geoButton floatRight">
+                        <input type="submit" value="ПІДІБРАТИ БАЗУ">
+                    </form>
+                </div>
+                </div>
+                <div class="rightColumnGeo floatRight"> <img src="img\geoPhone.png"\></div>
+            </div>
+        </div>
+        <div class="workDelivery">
+            <div class="innerDelivery">
+                <div class="deliveryTitle"><h2>Як працює розсилка?</h2></div>
+                <div class="fourSteps">
+                <div class="application floatLeft">
+                    <img src="img\application.png"\>
+                    <h3>Заявка</h3>
+                    <p>Ви залишаєте заявку на сайті або телефонуйте нам по телефону <br/><b>+3 (098) 888-88-88</b></p>
+                </div>
+                <img class="deliveryArrow floatLeft" src="img\deliveryArrow.png"\>
+                <div class="consultation floatLeft">
+                    <img src="img\consultation.png"\>
+                    <h3>Консультація</h3>
+                    <p>Ми обговорюємо з Вами варіант розсилки, базу, по якій вона буде розсилатися, даємо рекомендації по контенту.</p>
+                </div>
+                <img class="deliveryArrow floatLeft" src="img\deliveryArrow.png"\>
+                <div class="preparation floatLeft">
+                    <img src="img\preparation.png"\>
+                    <h3>Підготовка</h3>
+                    <p>Остаточно визначитися з розсилкою, базою і контентом, що розсилається.</p>
+                </div>
+                <img class="deliveryArrow floatLeft" src="img\deliveryArrow.png"\>
+                <div class="start floatLeft">
+                    <img src="img\start.png"\>
+                    <h3>Запуск</h3>
+                    <p>Робимо запуск і отримуємо відгук / результат від Ваших клієнтів!</p>
+                </div>
+                </div>
+                <div class="deliverySubmit">
+                <form>
+                    <input type="submit" value="ЗАМОВИТИ РОЗСИЛКУ">
+                </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+        <div class="innerFooter">
+            <div class="networks floatLeft">
+                <a href="" class="socialButtons"></a>
+                <a href="" class="socialButtons"></a>
+                <a href="" class="socialButtons"></a>
+            </div>
+            <div class="copyRight floatLeft">
+                <p>&copy; WhatsApp 2017</p>
+            </div>
+            <div class="lowerButton floatRight">
+                <form>
+                    <input type="submit" value="Розрахувати вартість" class="buttonCalculateTheCost">
+                </form>
+            </div>
+        </div>
+        </footer>
+    </body>
+</html>
